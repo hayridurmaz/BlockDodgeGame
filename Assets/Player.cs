@@ -18,4 +18,8 @@ public class Player : MonoBehaviour {
         newPosition.x = Mathf.Clamp(newPosition.x, -mapWidth, mapWidth);
         rb.MovePosition(newPosition);
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        FindObjectOfType<GameManager>().endGame();
+    }
 }
