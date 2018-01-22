@@ -11,4 +11,9 @@ public class Block : MonoBehaviour {
             Destroy(gameObject);
         }
 	}
+
+    private void Start()
+    {
+        GetComponent<Rigidbody2D>().gravityScale += Time.timeSinceLevelLoad/40f;
+    }
 }
