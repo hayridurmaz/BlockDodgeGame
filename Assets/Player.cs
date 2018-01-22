@@ -23,12 +23,12 @@ public class Player : MonoBehaviour {
                 Debug.Log(touch.position.x);
                 if (touch.position.x > (Screen.width / 2))
                 {
-                    k = 15f;//moves player right
+                    k = 5f;//moves player right
                 }
 
                 if (touch.position.x < (Screen.width / 2))
                 {
-                    k= -15f; //moves player left
+                    k= -5f; //moves player left
                 }
             }
         }
