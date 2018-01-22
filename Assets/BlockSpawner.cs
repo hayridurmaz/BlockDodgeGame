@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BlockSpawner : MonoBehaviour {
     public Transform[] spawnPoints;
@@ -9,10 +10,13 @@ public class BlockSpawner : MonoBehaviour {
 
     private float timeToSpawn = 2f;
 
+    public Text score;
+
 	// Use this for initialization
 	void Start () {
 
-       //hello
+        //hello
+        score.text = "0";
 
     }
 	
@@ -22,6 +26,7 @@ public class BlockSpawner : MonoBehaviour {
         {
             spawnBlocks();
             timeToSpawn = Time.time + timeBetweenWaves;
+            score.text = int.Parse(score.text) +1+"";
         }
     }
 
